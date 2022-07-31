@@ -1,8 +1,8 @@
 export default function createApis(server) {
-  server.get('/demo/:name', (_, request) => {
-    const params = request.params;
+  server.get('/demo', (_, request) => {
+    const params = request.queryParams;
 
-    console.info('get params', params.name);
+    console.info('[server] get params', params);
 
     return [
       { id: '1', name: 'Luke' },
@@ -12,9 +12,11 @@ export default function createApis(server) {
   });
 
   server.post('/demo', (_, request) => {
+    const params = request.queryParams;
     const data = JSON.parse(request.requestBody);
 
-    console.info('post data', data.name);
+    console.info('[server] post params', params);
+    console.info('[server] post data', data);
 
     return [
       { id: '1', name: 'Luke' },

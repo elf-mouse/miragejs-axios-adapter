@@ -1,6 +1,6 @@
 {
   "name": "miragejs-axios-adapter",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "description": "miragejs axios adapter",
   "main": "dist/index.js",
   "files": [
@@ -34,5 +34,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "miragejs": "^0.1.45",
     "prettier": "^2.7.1"
+  },
+  "peerDependencies": {
+    "miragejs": "^0.1.45"
   }
 }

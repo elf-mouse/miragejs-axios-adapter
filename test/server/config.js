@@ -1,4 +1,4 @@
-export const NAMESPACE = '/mock';
+export const NAMESPACE = '/mock/api';
+export const MOCK_API_REGEX = /^\/mock\/api/;
 
-export const MOCK_API_REGEX = /^\/mock/;
-export const PROXY_API_REGEX = /^\/(api|mock)\//; // NOTE: sync from balm config `server.proxyConfig.context`
+export const PROXY_API_REGEX = /^\/(api)\//; // NOTE: sync from balm config `server.proxyConfig.context`
