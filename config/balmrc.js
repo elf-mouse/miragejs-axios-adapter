@@ -14,7 +14,7 @@ module.exports = (balm) => {
     : {
         server: {
           proxyConfig: {
-            context: ['/api'],
+            context: ['/api', '/mock'],
             options: {
               target: 'http://example.dev',
               changeOrigin: true

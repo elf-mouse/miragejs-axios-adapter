@@ -1,6 +1,6 @@
 {
   "name": "miragejs-axios-adapter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "miragejs axios adapter",
   "main": "dist/index.js",
   "files": [
@@ -21,18 +21,18 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^0.27.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-parser": "^7.18.0",
     "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.0",
-    "@rollup/plugin-node-resolve": "^13.2.0",
-    "balm": "^4.5.0",
-    "eslint": "^8.13.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "balm": "^4.10.0",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "miragejs": "^0.1.43",
-    "prettier": "^2.6.2"
+    "miragejs": "^0.1.45",
+    "prettier": "^2.7.1"
   }
 }
