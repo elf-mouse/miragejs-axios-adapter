@@ -1,12 +1,32 @@
 import '@server';
 import axios from 'axios';
 
-axios.defaults.baseURL = '/api';
+const requestConfig = {
+  baseURL: '/mock'
+};
 
-async function test() {
-  const response = await axios.get('/mock/users');
+async function testGet() {
+  const response = await axios.get('/demo', {
+    params: {
+      name: 'Hello BalmJS'
+    },
+    ...requestConfig
+  });
   const { data } = response;
-  console.log('users:', data);
+  console.log('get data:', data);
 }
 
-test();
+async function testPost() {
+  const response = await axios.post(
+    '/demo?m=post',
+    {
+      name: 'Hello BalmUI'
+    },
+    requestConfig
+  );
+  const { data } = response;
+  console.log('post data:', data);
+}
+
+testGet();
+// testPost();

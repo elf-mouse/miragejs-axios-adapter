@@ -5,7 +5,7 @@ import { NAMESPACE, PROXY_API_REGEX, MOCK_API_REGEX } from './config';
 import createApis from './modules';
 
 function mockServer() {
-  useAdapter(axios, MOCK_API_REGEX);
+  useAdapter(axios, MOCK_API_REGEX, true);
 
   const server = createServer({
     routes() {
@@ -15,9 +15,10 @@ function mockServer() {
     }
   });
 
-  server.passthrough(
-    ({ url }) => PROXY_API_REGEX.test(url) && !MOCK_API_REGEX.test(url)
-  );
+  server.passthrough();
+  // server.passthrough(
+  //   ({ url }) => PROXY_API_REGEX.test(url) && !MOCK_API_REGEX.test(url)
+  // );
 
   return server;
 }
